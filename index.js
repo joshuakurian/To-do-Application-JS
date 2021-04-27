@@ -46,8 +46,7 @@ app
             title: req.body.title,
             description: req.body.description,
             createdby: req.body.createdby,
-            createdon: req.body.createdon,
-            completed: req.body.completed
+            completed: Date.now()
         }, err => {
             if (err) return res.send(500, err);
             res.redirect("/");
